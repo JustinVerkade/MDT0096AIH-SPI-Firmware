@@ -60,8 +60,8 @@ all: main-build
 main-build: MicroDisplay.elf secondary-outputs
 
 # Tool invocations
-MicroDisplay.elf MicroDisplay.map: $(OBJS) $(USER_OBJS) C:\Users\J.Verkade\OneDrive\Scripts\STM\MicroDisplay\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "MicroDisplay.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\J.Verkade\OneDrive\Scripts\STM\MicroDisplay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MicroDisplay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+MicroDisplay.elf MicroDisplay.map: $(OBJS) $(USER_OBJS) C:\Users\J.Verkade\Desktop\Programming\MDT0096AIH-SPI-Firmware\STM32F446RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "MicroDisplay.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\J.Verkade\Desktop\Programming\MDT0096AIH-SPI-Firmware\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MicroDisplay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

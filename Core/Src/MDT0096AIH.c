@@ -131,7 +131,7 @@ void MDT0096AIH_Init(MDT0096AIH_t *me,
 	HAL_Delay(100);
 
 	// define row window 0 -> 160
-	uint8_t raset_buffer[] = {0, 1+40, 0, 160-40};
+	uint8_t raset_buffer[] = {0, 1, 0, 160};
 	MDT0096AIH_TransmitCmdByte(me, MDT0096AIH_RASET, raset_buffer, 4);
 
 	HAL_Delay(100);
